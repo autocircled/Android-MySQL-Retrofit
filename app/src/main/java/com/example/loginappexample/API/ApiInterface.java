@@ -1,4 +1,4 @@
-package com.example.loginappexample;
+package com.example.loginappexample.API;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
