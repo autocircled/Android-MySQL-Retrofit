@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".LoginFragment">
+    tools:context=".Fragments.LoginFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login Form"
+        android:text="@string/login_form"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         android:layout_gravity="center"
@@ -19,21 +19,23 @@
         android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
+        android:hint="@string/username"
         android:inputType="text"
         android:layout_gravity="center"
-        android:layout_marginTop="70dp" />
+        android:layout_marginTop="70dp"
+        tools:ignore="Autofill" />
     <EditText
         android:id="@+id/user_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        tools:ignore="Autofill" />
     <Button
         android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/login"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -41,7 +43,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New User? Register Now"
+        android:text="@string/new_user_register_now"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />

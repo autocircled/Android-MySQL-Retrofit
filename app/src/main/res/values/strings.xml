@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">LoginAppExample</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pref_file">com.example.loginAppExample_file</string>
+    <string name="pref_login_status">com.example.loginAppExample_login_status</string>
+    <string name="pref_user_name">com.example.loginAppExample_user_name</string>
+    <string name="login_form">Login Form</string>
+    <string name="pass_word">Pass word</string>
+    <string name="registration_form">Registration Form</string>
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+    <string name="new_user_register_now">New User? Register Now</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
 </resources>
