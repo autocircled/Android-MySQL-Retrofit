@@ -3,14 +3,14 @@ package com.example.loginappexample.API;
 import com.google.gson.annotations.SerializedName;
 
 public class UserModel {
-    @SerializedName("response")
-    private String response;
+    @SerializedName("reply")
+    private String reply;
 
     @SerializedName("name")
     private String name;
 
-    public String getResponse() {
-        return response;
+    public String getReply() {
+        return reply;
     }
 
     public String getName() {

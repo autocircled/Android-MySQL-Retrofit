@@ -9,7 +9,7 @@ import com.example.loginappexample.Fragments.LoginFragment;
 import com.example.loginappexample.Fragments.RegisterFragment;
 import com.example.loginappexample.Fragments.WelcomeFragment;
 
-public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFormActivityListener {
+public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFormActivityListener, WelcomeFragment.OnLogoutButtonClickListener {
 
     public static PrefConfig prefConfig;
     public static ApiInterface apiInterface;
@@ -42,6 +42,14 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
 
     @Override
     public void performLogin(String name) {
+        prefConfig.writeName(name);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new WelcomeFragment()).commit();
+    }
 
+    @Override
+    public void performLogout() {
+        prefConfig.writeLoginStatus(false);
+        prefConfig.writeName("User");
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new LoginFragment()).commit();
     }
 }
