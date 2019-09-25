@@ -62,7 +62,7 @@ public class RegisterFragment extends Fragment {
             public void onResponse(Call<UserModel> call, Response<UserModel> response) {
                 if(response.body().getResponse().equals("ok")){
                     MainActivity.prefConfig.displayToast("Registration success...");
-                }else if(response.body().getResponse().equals("exits")){
+                }else if(response.body().getResponse().equals("exist")){
                     MainActivity.prefConfig.displayToast("User already exists...");
                 }else if(response.body().getResponse().equals("error")) {
                     MainActivity.prefConfig.displayToast("Something went wrong...");

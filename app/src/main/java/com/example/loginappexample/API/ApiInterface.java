@@ -6,9 +6,9 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    @POST("register.php")
-    Call<UserModel> performRegistration(@Query("name") String name, @Query("username") String username, @Query("password") String password);
+    @GET("register.php")
+    Call<UserModel> performRegistration(@Query("name") String name, @Query("user_name") String username, @Query("user_password") String password);
 
-    @POST("login.php")
-    Call<UserModel> performUserLogin(@Query("username") String username, @Query("password") String password);
+    @GET("login.php")
+    Call<UserModel> performUserLogin(@Query("user_name") String username, @Query("user_password") String password);
 }
