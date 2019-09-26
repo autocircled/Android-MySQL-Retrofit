@@ -3,12 +3,6 @@ package com.example.loginappexample;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.loginappexample.API.ApiClient;
-import com.example.loginappexample.API.ApiInterface;
-import com.example.loginappexample.Fragments.LoginFragment;
-import com.example.loginappexample.Fragments.RegisterFragment;
-import com.example.loginappexample.Fragments.WelcomeFragment;
-
 public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFormActivityListener, WelcomeFragment.OnLogoutButtonClickListener {
 
     public static PrefConfig prefConfig;

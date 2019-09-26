@@ -1,8 +1,7 @@
-package com.example.loginappexample.API;
+package com.example.loginappexample;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiInterface {

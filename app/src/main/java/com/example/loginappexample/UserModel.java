@@ -1,4 +1,4 @@
-package com.example.loginappexample.API;
+package com.example.loginappexample;
 
 import com.google.gson.annotations.SerializedName;
 

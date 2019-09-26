@@ -1,4 +1,4 @@
-package com.example.loginappexample.Fragments;
+package com.example.loginappexample;
 
 
 import android.app.Activity;

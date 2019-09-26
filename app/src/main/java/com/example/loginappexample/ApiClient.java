@@ -1,4 +1,4 @@
-package com.example.loginappexample.API;
+package com.example.loginappexample;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
