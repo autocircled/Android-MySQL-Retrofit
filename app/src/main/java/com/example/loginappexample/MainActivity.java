@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.example.loginappexample.API.ApiClient;
 import com.example.loginappexample.API.ApiInterface;
+import com.example.loginappexample.Fragments.GithubFragment;
 import com.example.loginappexample.Fragments.LoginFragment;
 import com.example.loginappexample.Fragments.RegisterFragment;
 import com.example.loginappexample.Fragments.WelcomeFragment;
@@ -44,6 +45,11 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
     public void performLogin(String name) {
         prefConfig.writeName(name);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new WelcomeFragment()).commit();
+    }
+
+    @Override
+    public void githubApiCallAction() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new GithubFragment()).addToBackStack(null).commit();
     }
 
     @Override

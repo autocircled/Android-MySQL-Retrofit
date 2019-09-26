@@ -48,5 +48,13 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    <TextView
+        android:id="@+id/textView_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Github Api Call"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
 </LinearLayout>

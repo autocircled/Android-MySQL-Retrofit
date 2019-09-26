@@ -32,7 +32,7 @@ import static android.content.ContentValues.TAG;
  */
 public class LoginFragment extends Fragment {
 
-    private TextView textViewReg;
+    private TextView textViewReg, githubApiCall;
     private EditText editTextUsername, editTextPassword;
     private Button buttonLogin;
     private OnLoginFormActivityListener onLoginFormActivityListener;
@@ -40,6 +40,7 @@ public class LoginFragment extends Fragment {
     public interface OnLoginFormActivityListener{
         public void performRegister();
         public void performLogin(String name);
+        public void githubApiCallAction();
     }
 
 
@@ -68,6 +69,14 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 performLoginForm();
+            }
+        });
+
+        githubApiCall = view.findViewById(R.id.textView_github);
+        githubApiCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onLoginFormActivityListener.githubApiCallAction();
             }
         });
         return view;
