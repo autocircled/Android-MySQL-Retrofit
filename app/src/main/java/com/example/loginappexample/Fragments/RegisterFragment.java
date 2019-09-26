@@ -60,11 +60,11 @@ public class RegisterFragment extends Fragment {
         call.enqueue(new Callback<UserModel>() {
             @Override
             public void onResponse(Call<UserModel> call, Response<UserModel> response) {
-                if(response.body().getReply().equals("ok")){
+                if(response.body().getResponse().equals("ok")){
                     MainActivity.prefConfig.displayToast("Registration success...");
-                }else if(response.body().getReply().equals("exist")){
+                }else if(response.body().getResponse().equals("exist")){
                     MainActivity.prefConfig.displayToast("User already exists...");
-                }else if(response.body().getReply().equals("error")) {
+                }else if(response.body().getResponse().equals("error")) {
                     MainActivity.prefConfig.displayToast("Something went wrong...");
                 }
             }

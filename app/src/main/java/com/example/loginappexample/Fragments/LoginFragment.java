@@ -81,13 +81,12 @@ public class LoginFragment extends Fragment {
         userModelCall.enqueue(new Callback<UserModel>() {
             @Override
             public void onResponse(Call<UserModel> call, Response<UserModel> response) {
-                Log.d(TAG, "onResponse: " + response.raw());
-//                if(response.body().getReply().equals("success")){
-//                    MainActivity.prefConfig.writeLoginStatus(true);
-//                    onLoginFormActivityListener.performLogin(response.body().getName());
-//                }else if(response.body().getReply().equals("failed")){
-//                    MainActivity.prefConfig.displayToast("Login failed..Try again later...");
-//                }
+                if(response.body().getResponse().equals("ok")){
+                    MainActivity.prefConfig.writeLoginStatus(true);
+                    onLoginFormActivityListener.performLogin(response.body().getName());
+                }else if(response.body().getResponse().equals("failed")){
+                    MainActivity.prefConfig.displayToast("Login failed..Try again later...");
+                }
             }
 
             @Override
